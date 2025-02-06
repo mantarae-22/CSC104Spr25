@@ -1,0 +1,31 @@
+body{
+	/* this will change the background color for the whole page */
+	background-color: blue;
+	/* this will change the text color for the whole page */
+	color: whitesmoke;
+	/* set the font family for the page */
+	font-family: Georgia, Times, serif;
+
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2{
+	/* add some padding around the title */
+	padding: 20px;
+	/* center the title text */
+	text-align: center;
+}
+
+h2{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h3{
+	font-size: x-large;
+	padding: 10px;
+}
+
+p{
+	padding: 10px;
+}
