@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(176, 230, 230);
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 80%;
+}
+
+header{
+    background: linear-gradient(to right, #e74922, #f4bfb1);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.btn{
+    background-color: white;
+    color: #9f2e12;
+    /* 10px top/bottom; 20px left/right */
+    padding: 10px 20px;
+    /* this makes the text bold */
+    font-weight: bold;
+    /* remove the border */
+    border: none;
+    /* make rounded corners */
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn:hover{
+    color: white;
+    background-color: #9f2e12;
+}
