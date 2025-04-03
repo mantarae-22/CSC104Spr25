@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <!-- TODO: move the CSS styles to a separate (external) CSS file -->
+    <style>
+        body{
+            background-image: url('images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg');
+            background-position: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* form styles */
+        form{
+            background-color: rgb(166, 248, 251);
+            max-width: 400px;
+            /* add 20px margin top and bottom; left and right will have evenly spaced margins, as determined by the browser;
+               the effect is that our form will be centered on the page */
+            margin: 20px auto; 
+            padding: 20px;
+            /* round the corners */
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            text-align: center;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea{
+            width: 50%;
+            padding: 10px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            background-color: rgb(243, 241, 241);
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"], input[type="reset"]{
+            width: 40%;
+            padding: 15px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            display: block;
+            font-weight: bold;
+        }
+
+
+        /* if you want to be more specific with the styles, you can use this syntax
+        input[type="text"]{
+
+        }
+        */
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>Beach Visitor Application</h1>
+    </header>
+
+    <main>
+        <!-- 
+            name and id: should be the same 
+            name: is typically used by the server (php code)
+            id: is typically used by JavaScript and CSS
+            action: the page that the form submits to - can be the same page or a separate page
+            method: get or post - get - the values are put in the querystring - only use this for testing
+                    post - in combination with SSL (https) the form data will be securely transmitted to the page that is processing the data
+        -->
+        <form name="frmApp" id="frmApp" action="#" method="post">
+            <!-- Text Input; set up the id and name - they should match;
+                 optionally, use placeholder text to help the user know what to enter
+                 required is an optional attribute - if the data must be entered, add required -->
+            <label id="nameLabel">Full Name:</label>
+            <input type="text" id="txtFirstName" aria-labelledby="nameLabel" placeholder="First Name">
+            <input type="text" id="txtLasttName" aria-labelledby="nameLabel" placeholder="Last Name">
+
+
+            <!--<input type="text" id="txtFullName" name="txtFullName" placeholder="Your Name" required>-->
+
+
+            
+            <!-- Email Input: set up the name and id
+                 placeholder is nice to give the user the idea of what their email address should look like
+                 use required if the data must be entered
+                  -->
+            <label for="emlAddress">Email:</label>
+            <input type="email" name="emlAddress" id="emlAddress" placeholder="yourname@domain.com" required>
+
+            <!-- Password input -->
+            <label for="pwUser">Password:</label>
+            <input type="password" name="pwUser" id="pwUser" required>
+
+            <!-- Number input -->
+             <label for="numFav">Favorite Number:</label>
+             <input type="number" name="numFav" id="numFav">
+
+            <!-- Date picker -->
+             <label for="dtTravel">Travel Date:</label>
+             <input type="date" name="dtTravel" id="dtTravel">
+
+             <!-- Time picker -->
+              <label for="tmTravel">Arrival Time:</label>
+              <input type="time" name="tmTravel" id="tmTravel">
+
+            <!-- Color picker -->
+             <label for="clFav">Favorite Color:</label>
+             <input type="color" name="clFav" id="clFav">
+
+             <!-- Range picker -->
+            <label for="rngInterest">How interested are you in this trip? (left: no interest; right: super interested)</label>
+            <input type="range" name="rngInterest" id="rngInterest" min="0" max="10" step="1">
+
+            <!-- Telephone input -->
+             <label for="telUser">Phone Number:</label>
+             <input type="tel" name="telUser" id="telUser" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+
+             <!-- URL input -->
+              <label for="urlUserWebsite">Website:</label>
+              <input type="url" name="urlUserWebsite" id="urlUserWebsite" placeholder="https://www.example.com">
+
+
+              <!-- Textarea - multiple rows of information, such as a comments box -->
+               <label for="txtaReason">Why do you want to visit our beach?</label>
+               <textarea name="txtaReason" id="txtaReason" rows="5" placeholder="Enter your explanation here."></textarea>
+
+
+            <input type="submit" value="Submit Appplication">
+            <input type="reset" value="Clear Form">
+        </form>
+    </main>
+</body>
+</html>
